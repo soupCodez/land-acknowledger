@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Land Acknowledger</title>
+{% endblock %}
+
+{% block body %}
+<header>
+  <h1>Welcome to Land Acknowledger</h1>
+</header>
+<main>
+<div class="container justify-content-center align-items-center" style="height: 100vh;">
+  <form action="/geocode" method="post">
+    <div class="mb-3">
+      <label for="address" class="form-label">Address</label>
+      <input class="form-control" id="address" name="address"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</main>
+<footer>
+  <p>&copy;2025 Souhardya Bhadra</p>
+</footer>
+{% endblock %}

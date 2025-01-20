@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Land Acknowledger</title>
+{% endblock %}
+
+{% block body %}
+<main>
+<h1>Result</h1>
+<div class="container justify-content-center align-items-center" style="height: 100vh;">
+    <p>The land you are on is of the: {{ names }}</p>
+    <p>Generated land acknowldedgement: We acknowledge we are hosted on the lands of the {{ names }}. We also recognize the enduring presence of all Indigenous peoples</p>
+</div>
+</main>
+<footer>
+  <p>&copy;2025 Souhardya Bhadra</p>
+</footer>
+{% endblock %}
