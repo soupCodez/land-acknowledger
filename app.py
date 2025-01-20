@@ -6,7 +6,11 @@ from geopy.geocoders import Nominatim
 app = Flask(__name__)
 
 def fetch(uri):
-    requests.get(uri)
+    if uri is None:
+        return None
+    elif uri == '':
+        return None
+    return requests.get(uri)
 
 with open('config.json') as config_file:
     config = json.load(config_file)
@@ -19,7 +23,7 @@ def index():
 @app.route('/geocode', methods=['POST'])
 def geocode():
     address = request.form['address']
-    if not address:
+    if not address or address == '':
         return "Address not provided", 400
 
     geolocator = Nominatim(user_agent="land-acknowledger")
@@ -45,5 +49,3 @@ def result():
 
 if __name__ == '__main__':
     app.run(debug=app.config['DEBUG'])
-elif __name__ == 'app':
-    application = app
