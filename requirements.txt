@@ -1,1 +1,3 @@
-flask geopy requests
+flask
+geopy
+requests
