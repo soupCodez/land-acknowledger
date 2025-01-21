@@ -1,0 +1,27 @@
+[
+  {
+    "question": "True or False? Indigenous children have higher rates of respiratory issues and infectious diseases.",
+    "answers": { "a": "True", "b": "False" },
+    "correctAnswer": "a"
+  },
+  {
+    "question": "What percentage of students on reserves graduate high school?",
+    "answers": { "a": "78%", "b": "50%", "c": "48%" },
+    "correctAnswer": "c"
+  },
+  {
+    "question": "On reserves, non-Indigenous workers can make up to __% more than Indigenous workers.",
+    "answers": { "a": "80", "b": "50", "c": "88" },
+    "correctAnswer": "c"
+  },
+  {
+    "question": "What percentage of prisoners do Indigenous people make up?",
+    "answers": { "a": "32%", "b": "54%", "c": "17%" },
+    "correctAnswer": "a"
+  },
+  {
+    "question": "What is the highest cause of death for Indigenous youth?",
+    "answers": { "a": "Poor Water", "b": "Suicide", "c": "Work Accidents" },
+    "correctAnswer": "b"
+  }
+]

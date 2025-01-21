@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block head %}
+<title>Land Acknowledger</title>
+{% endblock %} {% block body %}
+<main>
+  <h1>Map</h1>
+  <div id="content">
+    <iframe
+      width="100%"
+      height="100%"
+      frameborder="0"
+      style="
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        width: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        z-index: 999999;
+        height: 100%;
+      "
+      src="https://native-land.ca/api/embed/embed.html?maps=languages,territories&position=43.7830,-79.3518&key=wmdJy1X5GQ6Tkr6PNnn0F"
+    ></iframe>
+  </div>
+</main>
+<footer>
+  <p>&copy;2025 Souhardya Bhadra</p>
+</footer>
+{% endblock %}

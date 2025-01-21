@@ -1,23 +1,36 @@
-{% extends 'base.html' %}
-
-{% block head %}
+{% extends 'base.html' %} {% block head %}
 <title>Land Acknowledger</title>
-{% endblock %}
-
-{% block body %}
+{% endblock %} {% block body %}
 <header>
   <h1>Welcome to Land Acknowledger</h1>
 </header>
 <main>
-<div class="container justify-content-center align-items-center" style="height: 100vh;">
-  <form action="/geocode" method="post">
-    <div class="mb-3">
-      <label for="address" class="form-label">Address</label>
-      <input class="form-control" id="address" name="address"></input>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
+  <div
+    class="container justify-content-center align-items-center"
+    style="height: 100vh"
+  >
+    <p>
+      Input an address to find which Indigenous communities the land belongs to.
+    </p>
+    <form action="/geocode" method="post">
+      <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <input class="form-control" id="address" name="address" />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <ul>
+      <li>
+        <a href="/map">Map</a>
+      </li>
+      <li>
+        <a href="/info">Issues for Indigenous people</a>
+      </li>
+      <li>
+        <a href="/quiz">Quiz</a>
+      </li>
+    </ul>
+  </div>
 </main>
 <footer>
   <p>&copy;2025 Souhardya Bhadra</p>

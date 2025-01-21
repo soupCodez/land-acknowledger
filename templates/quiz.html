@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block head %}
+<title>Land Acknowledger</title>
+{% endblock %} {% block body %}
+<main>
+  <h1>Quiz</h1>
+  <div
+    class="container justify-content-center align-items-center"
+    style="height: 100vh"
+  >
+    {% if score is not none %}
+    <div id="results">
+      <h2>You got {{ score }} out of {{ questions|length }}</h2>
+    </div>
+    <a href="/">Take the Quiz Again</a>
+    {% else %}
+    <form method="POST">
+      {% for i, question in enumerate(questions) %}
+      <fieldset>
+        <legend>{{ question.question }}</legend>
+        {% for key, answer in question.answers.items() %}
+        <label>
+          <input
+            type="radio"
+            name="question{{ i }}"
+            value="{{ key }}"
+            required
+          />
+          {{ key }}: {{ answer }} </label
+        ><br />
+        {% endfor %}
+      </fieldset>
+      {% endfor %}
+      <button type="submit">Get Results</button>
+    </form>
+    {% endif %}
+  </div>
+</main>
+<footer>
+  <p>&copy;2025 Souhardya Bhadra</p>
+</footer>
+{% endblock %}
